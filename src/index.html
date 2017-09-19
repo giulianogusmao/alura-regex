@@ -58,5 +58,24 @@
    <br />
 
     <script src="js/regex.js"></script>
+    <script>
+      // let alvo = '11a22b33c';
+      // let strRegExp = /\d\d\w/;
+
+      let alvo = 'Z171PZ7AZ23PZ7819AZ78GZ1AZ99IZ34O';
+      let strRegExp = /[^Z\d+]/g;
+
+      console.log(alvo.match(strRegExp).join(''));
+
+
+      let exp = new RegExp(strRegExp, 'g');
+
+      while(resultado = exp.exec(alvo)) {
+        console.log(resultado);
+        console.log(exp.lastIndex);
+        // [a,b] = resultado;
+        // console.log(b);
+      }
+    </script>
     </body>
 </html>
